@@ -1,0 +1,31 @@
+{
+    "lens": "expertquery",
+    "start": 0,
+    "end": 34,
+    "phrase": "Who knows about Verse in Belgium ?",
+    "confidence": 0.9815999865531921,
+    "actions": [],
+    "payload": "{\"log_messages\":[],\"text\":[\"On it !\"],\"nodes_visited\":[\"Expert Question\"]}",
+    "context": "{\"conversation_id\":\"ac1f66e3-a192-45a7-8f6a-56f66e208949\",\"system\":{\"dialog_stack\":[{\"dialog_node\":\"root\"}],\"dialog_turn_counter\":1.0,\"dialog_request_counter\":1.0,\"branch_exited\":true,\"branch_exited_reason\":\"completed\"}}",
+    "extractedInfo": {
+        "entities": [{
+            "text": "Belgium",
+            "type": "Country",
+            "source": "AlchemyLanguage",
+            "count": 1,
+            "relevance": 0.33
+        }],
+        "keywords": [{
+            "relevance": 0.936138,
+            "text": "Verse"
+        }, {
+            "relevance": 0.630685,
+            "text": "Belgium"
+        }],
+        "dates": []
+    },
+    "applicationId": "515898ad-f9dd-45e4-ad8d-a5bf217219c2",
+    "lensId": "0ef2e540-0b53-11e7-bac5-b989eb0767c2",
+    "focusVersion": 5,
+    "hidden": false
+}

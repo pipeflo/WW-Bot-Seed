@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>IBM Watson Work Connections Expert Finder</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/style.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+				<img class="newappIcon" src="images/expertise_finder_icon.png">
+			</div>
+			<div class="col-md-8">
+				<h1 id="message">Connections Expert Finder Configuration</h1>
+				<p class='description'>In this space, the expert finder is configured to use : </p>
+				<div class="card" id="configarea">
+					<div class="card-block">
+						<form action="setconfig" method="post">
+							<div id="targetenv" class="form-group">
+								<label for="chooseEnv">Environment </label>
+								<div>
+									<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="chooseenv" name="envidchosen">
+										<option value="SG">Silvergreen</option>
+										<option value="SC">Showcase</option>
+									</select>
+								</div>
+								<div class="form-group hide-me">
+									<input type="text" class="form-control" id="spaceid" name="spaceid">
+								</div>
+								<br> Without configuration, the default setting is 'Silvergreen'.
+								<br><br>
+								<button type="submit" class="btn btn-primary">OK</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div id="errorarea">
+					Can't configure the app, no space id on the URL ...
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script>
+		$(document).ready(function() {
+			// Initialize
+			//var urlParams = new URLSearchParams(window.location.search);
+			$('#chooseenv').val('SG');
+			$('#errorarea').hide();
+
+			// Get the spaceId from the query param and set it as a form input.
+			var urlParams = {};
+			var match;
+			var pl = /\+/g; // Regex for replacing addition symbol with a space
+			var search = /([^&=]+)=?([^&]*)/g;
+			var decode = function(s) {
+				return decodeURIComponent(s.replace(pl, " "));
+			};
+			var query = window.location.search.substring(1);
+
+			while (match = search.exec(query))
+				urlParams[decode(match[1])] = decode(match[2]);
+
+			var spaceId = urlParams.spaceId;
+			console.log("Query parameter spaceId = ", spaceId);
+			// Check if we have the query param !
+			if (spaceId) {
+
+			} else {
+				$('#errorarea').show();
+				$('#configarea').hide();
+			}
+
+
+			document.getElementById("spaceid").value = spaceId;
+
+			// Load the existing setting and set the dropdown accoringly - if no setting available , print 'not set yet'.
+			var resturl = "/getconfig?spaceid=" + spaceId;
+			$.getJSON(resturl, function(resp) {
+				console.log(resp);
+				$('#chooseenv').val(resp.env);
+			});
+		});
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{
+    "spaceName": "NewExpertFinder",
+    "spaceId": "58cc4491e4b0a740f1e62881",
+    "annotationPayload": "{\"lens\":\"expertquery\",\"start\":0,\"end\":23,\"phrase\":\"Who knows about Verse ?\",\"confidence\":0.962109386920929,\"actions\":[],\"payload\":\"{\\\"log_messages\\\":[],\\\"text\\\":[\\\"On it !\\\"],\\\"nodes_visited\\\":[\\\"Expert Question\\\"]}\",\"context\":\"{\\\"conversation_id\\\":\\\"cc2e9f43-7fe6-4452-8d34-61a8b6636f09\\\",\\\"system\\\":{\\\"dialog_stack\\\":[{\\\"dialog_node\\\":\\\"root\\\"}],\\\"dialog_turn_counter\\\":1.0,\\\"dialog_request_counter\\\":1.0,\\\"branch_exited\\\":true,\\\"branch_exited_reason\\\":\\\"completed\\\"}}\",\"extractedInfo\":{\"entities\":[],\"keywords\":[{\"relevance\":0.944501,\"text\":\"Verse\"}],\"dates\":[]},\"applicationId\":\"515898ad-f9dd-45e4-ad8d-a5bf217219c2\",\"lensId\":\"0ef2e540-0b53-11e7-bac5-b989eb0767c2\",\"focusVersion\":5,\"hidden\":false}",
+    "messageId": "58e35c18e4b069b1f047412d",
+    "annotationType": "message-focus",
+    "annotationId": "58e35c19e4b069b1f047412e",
+    "time": 1491295257547,
+    "type": "message-annotation-added",
+    "userName": null,
+    "userId": "toscana-service-watson-conversation-client-id"
+}

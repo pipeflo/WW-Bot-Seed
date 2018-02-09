@@ -1,0 +1,12 @@
+{
+    "spaceName": "NewExpertFinder",
+    "spaceId": "58cc4491e4b0a740f1e62881",
+    "annotationPayload": "{\"type\":\"actionSelected\",\"annotationId\":null,\"type\":\"actionSelected\",\"version\":\"1.0\",\"created\":null,\"createdBy\":null,\"updated\":null,\"updatedBy\":null,\"tokenClientId\":null,\"conversationId\":\"58cc4491e4b0a740f1e62881\",\"targetDialogId\":\"Get_Connections_Experts\",\"referralMessageId\":\"58e392a0e4b069b1f048a868\",\"actionId\":\"Get_Connections_Experts\",\"targetUserId\":\"515898ad-f9dd-45e4-ad8d-a5bf217219c2\"}",
+    "messageId": "58e392c7e4b052f61a1ae497",
+    "annotationType": "actionSelected",
+    "annotationId": "58e392c7e4b052f61a1ae498",
+    "time": 1491309255311,
+    "type": "message-annotation-added",
+    "userName": "Steve Lievens",
+    "userId": "d2161058-7af2-4680-a595-7499ed4be754"
+}

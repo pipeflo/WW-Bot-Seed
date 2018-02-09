@@ -1,0 +1,18 @@
+---
+applications:
+- name: <appName>
+  memory: 256M
+  host: <appName>
+  domain: mybluemix.net
+  command: npm start
+  services:
+  - <CloudantServiceName>
+  env:
+    APP_ID: <Watson Workspace App ID>
+    APP_SECRET: <Watson Workspace App Secret>
+    APP_WEBHOOK_SECRET: <Watson Workspace Application Webhook Secret>
+    CONNECTIONS_HOST: https://apps.<na.ce.ap>.collabserv.com
+    CONNECTIONS_USER: <Connections Cloud User Email>
+    CONNECTIONS_PW: <Connections Cloud User Password>
+    CONNECTIONS_ORGNAME: <Conenctions Organization name - Optional>
+    CONNECTIONS_AVATAR_URL: <Icon to Display - Optional>
